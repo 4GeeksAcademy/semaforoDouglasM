@@ -12,19 +12,31 @@ const TrafficLight = () => {
     const handleTurnOff = () => {
         SetColor(null);
     };
-        return (
-            <div className="container mt-2">
+    const changeColor = () => {
+        if (color === "red") {
+            SetColor("green");
+        } else if (color === "green") {
+            SetColor("yellow");
+        } else {
+            SetColor("red");
+        }
+    };
+    return (
+        <div className="container d-flex mt-2">
+            <div>
                 <div className="baseTrafficLigth"></div>
                 <div className="trafficLigth">
                     <div className={`red ${color === "red" ? "luz" : ""}`} onClick={() => handleClick("red")}></div>
                     <div className={`yellow ${color === "yellow" ? "luz" : ""}`} onClick={() => handleClick("yellow")}></div>
                     <div className={`green ${color === "green" ? "luz" : ""}`} onClick={() => handleClick("green")}></div>
                 </div>
-                <div>
-                    <button onClick={handleTurnOff}>Apagar la luz</button>
-                </div>
             </div>
-        );
+            <div className="d-flex flex-column justify-content-center">
+                <button onClick={handleTurnOff}>Apagar la luz</button>
+                <button onClick={changeColor}> Cambiar de Color</button>
+            </div>
+        </div>
+    );
 
-    };
-    export default TrafficLight;
+};
+export default TrafficLight;
