@@ -1,12 +1,53 @@
+.trafficLigth {
+    width: 200px;
+    height: 500px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-/* 
+.baseTrafficLigth {
+    width: 50px;
+    height: 140px;
+    background-color: black;
+    margin-left: 75px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.yellow {
+    border-radius: 50%;
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+}
 
-*/
+.green {
+    border-radius: 50%;
+    background-color: green;
+    width: 150px;
+    height: 150px;
+}
+
+.red {
+    border-radius: 50%;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+}
+
+.luz {
+    box-shadow: 0px 0px 20px 10px #fff;
+}
+
+button {
+    background-color: grey;
+    width: 150px;
+    font-size: medium;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    color: aliceblue;
+
+}
